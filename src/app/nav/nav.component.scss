@@ -295,7 +295,7 @@ background-color: rgb(
     display: block;
     @include mix.flex-row;
     justify-content: baseline;
-    width: 34%;
+    width: 40%;
   }
 
   .logo-container-tablet img {
@@ -304,7 +304,7 @@ background-color: rgb(
   }
 
   .nav-items-container {
-    width: 66%;
+    width: 60%;
     @include mix.flex-row;
     justify-content: space-between;
   }
