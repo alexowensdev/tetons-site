@@ -1,0 +1,57 @@
+@use './variables' as v;
+
+@mixin dark-paragraph-font {
+    color: v.$dark;
+    font-size: 18px;
+    @include kulim-park-regular; // Assuming kulim-park-regular is also a mixin
+  }
+
+@mixin kulim-park-regular {
+    font-family: "Kulim Park", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+// Font Mixins
+
+@mixin battambang-regular {
+    font-family: "Battambang", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin battambang-bold {
+    font-family: "Battambang", system-ui;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin kulim-park-bold {
+    font-family: "Kulim Park", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+
+//
+// Flex Styles
+//
+
+@mixin flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-flow: column nowrap;
+}
