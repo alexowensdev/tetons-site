@@ -112,6 +112,11 @@ background-color: rgb(
   }
 }
 
+@media (min-width: 450px) {
+  .menu-items-container a {
+    font-size: 24px !important;
+  }
+}
 
 
 
