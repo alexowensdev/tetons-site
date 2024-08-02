@@ -23,3 +23,14 @@ $blue-opacity: rgba($blue, $opacity-level);
 
 $cta-btn-color: $blue;
 $cta-hover-color-changer: 10; // -100 to 100 (10 is 10% brighter)
+
+
+
+//
+// Screen Size Breaks
+//
+
+$mobile-max: 499px;
+$tablet-min: 500px;
+$tablet-max: 999px;
+$desktop-min: 1000px;
