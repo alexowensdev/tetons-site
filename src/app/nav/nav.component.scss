@@ -2,7 +2,7 @@
 @use '../styles/variables' as v;
 @use '../styles/mixins' as mix;
 
-// Nav
+// Nav Containers
 
 .nav-bar {
   height: 120px;
@@ -53,7 +53,7 @@
 
 
 
-// Logo in Nav
+// Logo
 
 
 .logo-container-desktop {
@@ -72,7 +72,7 @@
 }
 
 
-// Menu Section in Nav
+// Menu Section
 
 .menu-items-container a {
   text-align: center;
@@ -102,8 +102,7 @@ background-color: rgb(
 
 
 
-
-
+// Mobile Styles
 
 @media (max-width: 350px) {
   .menu-items-container {
@@ -118,13 +117,12 @@ background-color: rgb(
   }
 }
 
+
 @media (min-width: 450px) {
   .menu-items-container a {
     font-size: 21px !important;
   }
 }
-
-
 
 
 @media (max-width: 500px) {
@@ -174,8 +172,7 @@ background-color: rgb(
 
 
 
-
-
+// Small Tablet Styles
 
 @media (max-width: 700px) {
 
@@ -208,10 +205,7 @@ background-color: rgb(
 
 
 
-
-
-
-
+// Tablet Styles
 
 @media (min-width: 500px) and (max-width: 1000px) {
   .nav-bar {
@@ -249,6 +243,7 @@ background-color: rgb(
   
 }
 
+
 @media (min-width: 500px) and (max-width: 700px) {
   .menu-section-container {
     width: 100%;
@@ -256,6 +251,7 @@ background-color: rgb(
     @include mix.flex-center;
   }
 }
+
 
 @media (min-width: 701px) and (max-width: 1000px) {
   .nav-items-container {
@@ -284,6 +280,10 @@ background-color: rgb(
     white-space: nowrap;
   }
 }
+
+
+
+// Desktop Styles
 
 @media (min-width: 1001px) {
   .menu-section-container {

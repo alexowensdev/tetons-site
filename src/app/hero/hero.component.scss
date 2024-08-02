@@ -1,3 +1,49 @@
 @use '../app.component.scss';
 @use '../styles/variables' as v;
 @use '../styles/mixins' as mix;
+
+.hero-container {
+    background-image: url('./teton-01-midjourney-jan-2024.webp');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-color: red;
+}
+
+.hero-container h1 {
+    margin: 0px;
+}
+
+@media (max-width: 499px) {
+    .hero-container {
+        height: 100vw;
+        background-size: contain; 
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1000px) {
+    .hero-container {
+        height: 500px;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position-y: -5vw;
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1450px) {
+    .hero-container {
+        height: 500px;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position-y: -15vw;
+    }
+}
+
+@media (min-width: 1451px) {
+    .hero-container {
+        height: clamp(500px, 50vw, 650px);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position-y: -20vw;
+    }
+}
