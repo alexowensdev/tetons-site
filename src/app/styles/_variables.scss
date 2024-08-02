@@ -7,6 +7,13 @@ $light: #ffffff;
 $red: #ff0035;
 $light-blue: #47e3ff;
 $blue: #2081c3;
+$opacity-level: 0.90;
+
+$dark-opacity: rgba($dark, $opacity-level);
+$light-opacity: rgba($light, $opacity-level);
+$red-opacity: rgba($red, $opacity-level);
+$light-blue-opacity: rgba($light-blue, $opacity-level);
+$blue-opacity: rgba($blue, $opacity-level);
 
 
 

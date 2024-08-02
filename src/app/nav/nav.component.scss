@@ -14,7 +14,7 @@
 
 .nav-container {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1400px;
   @include mix.flex-row;
   @include mix.flex-center;
 }
@@ -292,50 +292,75 @@ background-color: rgb(
     @include mix.flex-center;
   }
 
-}
-
-@media (min-width: 1300px) {  
-  .logo-container-desktop {
-    display: none;
+@media (min-width: 1450px) {
+ .logo-container-desktop {
+    width: 33%;
   }
-
-  .logo-container-tablet {
-    display: block;
-    @include mix.flex-row;
-    justify-content: baseline;
-    width: 40%;
-  }
-
-  .logo-container-tablet img {
-    display: block;
-    width: 100%;
-  }
-
+  
   .nav-items-container {
-    width: 60%;
+    width: 66%;
     @include mix.flex-row;
     justify-content: space-between;
   }
   
   .menu-section-container {
-    width: 70%;
+    width: 50%;
     @include mix.flex-row;
     align-items: center;
+    justify-content: baseline;
   }
   
   .cta-button-container {
-    width: 30%;
-    @include mix.flex-col;
-    align-items: end;
-    white-space: nowrap;
+    width: 50%;
   }
-  
-  .menu-items-container {
-    width: 100%;
-    max-width: 450px;
-    @include mix.flex-row;
-    justify-content: space-around;
-    padding: 10px 20px 0px 20px;
-  }
+}
+
+ 
 
 }
+
+// @media (min-width: 1300px) {  
+//   .logo-container-desktop {
+//     display: none;
+//   }
+
+//   .logo-container-tablet {
+//     display: block;
+//     @include mix.flex-row;
+//     justify-content: baseline;
+//     width: 40%;
+//   }
+
+//   .logo-container-tablet img {
+//     display: block;
+//     width: 100%;
+//   }
+
+//   .nav-items-container {
+//     width: 60%;
+//     @include mix.flex-row;
+//     justify-content: space-between;
+//   }
+  
+//   .menu-section-container {
+//     width: 70%;
+  //   @include mix.flex-row;
+  //   align-items: center;
+  // }
+  
+  // .cta-button-container {
+  //   width: 30%;
+  //   @include mix.flex-col;
+  //   align-items: end;
+  //   white-space: nowrap;
+  // }
+  
+  // .menu-items-container {
+  //   width: 100%;
+  //   max-width: 450px;
+  //   @include mix.flex-row;
+  //   justify-content: space-around;
+//     padding: 10px 20px 0px 20px;
+//   }
+
+// }

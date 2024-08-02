@@ -3,30 +3,143 @@
 @use '../styles/mixins' as mix;
 
 .hero-container {
-    background-image: url('./teton-01-midjourney-jan-2024.webp');
+    background-image: url('./teton-01-midjourney-jan-2024.png');
     width: 100%;
     background-repeat: no-repeat;
     background-position-x: center;
-    background-color: red;
+    border-bottom: 2px solid v.$dark;
+    @include mix.flex-center;
+    @include mix.flex-row;
 }
 
 .hero-container h1 {
     margin: 0px;
 }
 
+.banner {
+    width: 100%;
+    padding: 24px;
+    height: auto;
+    background-color: v.$dark-opacity;
+    @include mix.flex-center;
+    @include mix.flex-row;
+}
+
+.mini-banner {
+    width: 100%;
+    padding: 12px;
+    height: auto;
+    background-color: v.$dark;
+    @include mix.flex-center;
+    @include mix.flex-row;
+}
+
+.mini-banner-column {
+    width: 100%;
+    @include mix.flex-center;
+    @include mix.flex-col;
+}
+
+.mini-hero-tagline {
+    height: 100%;
+}
+
+.mini-hero-tagline h1 {
+    font-size: 24px;
+    color: v.$light;
+    letter-spacing: 6px;
+    text-align: center;
+    @include mix.kulim-park-thin;
+}
+
+
+.banner-column {
+    width: 80%;
+    @include mix.flex-center;
+    @include mix.flex-col;
+}
+
+.hero-logo {
+    height: 66%;
+    margin-bottom: 30px;
+    @include mix.flex-row;
+    @include mix.flex-center;
+}
+
+.hero-logo img {
+    height: auto;
+    width: 100%;
+}
+
+.hero-tagline {
+    height: 34%;
+}
+
+.hero-tagline h1 {
+    font-size: clamp(36px, 3vw, 72px);
+    color: v.$light;
+    letter-spacing: 6px;
+    text-align: center;
+    @include mix.kulim-park-thin;
+}
+
+
+
+
+
 @media (max-width: 499px) {
     .hero-container {
         height: 100vw;
-        background-size: contain; 
+        background-size: cover; 
+    }
+
+    .banner {
+        padding: 18px 18px 24px 18px;
+    }
+
+    .hero-tagline {
+        display: none;
+    }
+
+    .banner-column {
+        width: 100%;
+        @include mix.flex-center;
+        @include mix.flex-col;
+    }
+    
+    .hero-logo {
+        height: 100%;
+        margin-bottom: 0px;
+        @include mix.flex-row;
+        @include mix.flex-center;
+    }
+    
+    .hero-logo img {
+        height: auto;
+        width: 100%;
     }
 }
 
 @media (min-width: 500px) and (max-width: 1000px) {
     .hero-container {
-        height: 500px;
+        height: 400px;
         background-size: cover;
         background-attachment: fixed;
-        background-position-y: -5vw;
+        background-position-y: 1vw;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .mini-hero-tagline h1 {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 1001px) {
+    .mini-banner {
+        display: none;
     }
 }
 
@@ -35,15 +148,15 @@
         height: 500px;
         background-size: cover;
         background-attachment: fixed;
-        background-position-y: -15vw;
+        background-position-y: -12vw;
     }
 }
 
 @media (min-width: 1451px) {
     .hero-container {
-        height: clamp(500px, 50vw, 650px);
+        height: 675px;
         background-size: cover;
         background-attachment: fixed;
-        background-position-y: -20vw;
+        background-position-y: -10vw;
     }
 }
