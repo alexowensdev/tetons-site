@@ -5,6 +5,12 @@
 
 
 // General Declarations
+video {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index:-100;
+  }
 
 h1 {
     margin: 0px;
@@ -19,10 +25,7 @@ h1 {
 // Container
 
 .hero-container {
-    background-image: url('./teton-01-midjourney-jan-2024.png');
     width: 100%;
-    background-repeat: no-repeat;
-    background-position-x: center;
     border-bottom: 2px solid v.$dark;
     @include mix.flex-center;
     @include mix.flex-col;
@@ -68,59 +71,6 @@ h1 {
 .hero-tagline h1 {
     font-size: clamp(36px, 3vw, 72px);
 }
-
-
-
-// Arrows
-
-.arrows {
-    width: 60px;
-    height: 72px;
-    position:absolute;
-    left: 50%;
-    margin-left: -30px;
-  }
-
-.arrows path {
-    stroke: v.$light-blue;
-    fill: transparent;
-    stroke-width: 3px;  
-    animation: arrow 4s infinite;
-    -webkit-animation: arrow 3s infinite; 
-  }
-  
-@keyframes arrow
-  {
-  0% {opacity:0}
-  40% {opacity:1}
-  80% {opacity:0}
-  100% {opacity:0}
-  }
-  
-@-webkit-keyframes arrow
-  {
-  0% {opacity:0}
-  40% {opacity:1}
-  80% {opacity:0}
-  100% {opacity:0}
-  }
-  
-.arrows path.a1 {
-    animation-delay:-1s;
-    -webkit-animation-delay:-1s;
-  }
-  
-.arrows path.a2 {
-    animation-delay:-0.5s;
-    -webkit-animation-delay:-0.5s;
-  }
-  
-.arrows path.a3 { 
-    animation-delay:0s;
-    -webkit-animation-delay:0s;
-  }
-  
-  
 
 // Mini Banner
 
@@ -177,10 +127,6 @@ h1 {
         @include mix.flex-row;
     }
 
-    .arrows {
-        bottom: 5%;
-      }
-
     .mini-banner {
        padding: 24px;
     }
@@ -191,7 +137,7 @@ h1 {
 
 @media (min-width: v.$tablet-min) and (max-width: v.$tablet-max) {
     .hero-container {
-        height: 400px;
+        height: 500px;
         background-size: cover;
         background-attachment: fixed;
         background-position-y: 1vw;
@@ -205,9 +151,6 @@ h1 {
         font-size: 36px;
     }
 
-    .arrows {
-        bottom: 10%;
-      }
 }
 
 
@@ -226,7 +169,4 @@ h1 {
         background-position-y: -10vw;
     }
 
-    .arrows {
-        bottom: 14%;
-      }
 }
