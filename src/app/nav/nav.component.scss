@@ -2,6 +2,8 @@
 @use '../styles/variables' as v;
 @use '../styles/mixins' as mix;
 
+
+
 // Nav Containers
 
 .nav-bar {
@@ -14,13 +16,9 @@
 
 .nav-container {
   width: 100%;
-  max-width: 1400px;
+  max-width: v.$max-container-width;
   @include mix.flex-row;
   @include mix.flex-center;
-}
-
-.logo-container-desktop {
-  width: 10%;
 }
 
 .nav-items-container {
@@ -30,9 +28,9 @@
 }
 
 .menu-section-container {
-  width: 70%;
+  width: 100%;
   @include mix.flex-row;
-  align-items: center;
+  @include mix.flex-center;
 }
 
 .cta-button-container {
@@ -52,24 +50,29 @@
 
 
 
-
 // Logo
 
-
-.logo-container-desktop {
+.logo-container-square {
+  width: 10%;
   @include mix.flex-col;
   align-items: baseline;
 }
 
-.logo-container-tablet {
+.logo-container-line {
   display: none;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 36px;
+  @include mix.flex-row;
+  @include mix.flex-center;
 }
 
-.logo-container-desktop img {
+.logo-container-square img {
   width: auto;
   height: 60px;
   display: block;
 }
+
 
 
 // Menu Section
@@ -79,25 +82,16 @@
 }
 
 .menu-items-container a {
-  @extend %light-paragraph-font;
+  @include mix.light-paragraph-font;
 }
+
 
 
 // CTA Button 
 
 
 .cta-btn {
-  background-color: v.$cta-btn-color;
-  @extend %btn;
-  @extend %light-paragraph-font;
-
-  &:hover {
-background-color: rgb(
-  calc((red(v.$cta-btn-color) + v.$cta-hover-color-changer) * 1),
-  calc((green(v.$cta-btn-color) + v.$cta-hover-color-changer) * 1),
-  calc((blue(v.$cta-btn-color) + v.$cta-hover-color-changer) * 1)
-)
-}
+  @include mix.cta-btn-styles;
 }
 
 
@@ -125,7 +119,7 @@ background-color: rgb(
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: v.$mobile-max) {
   .nav-bar {
     height: auto;
   }
@@ -133,29 +127,20 @@ background-color: rgb(
   .nav-container {
     height: auto;
     @include mix.flex-col;
-    @include mix.flex-center;
   }
 
-  .logo-container-desktop {
+  .logo-container-square {
     width: 100%;
     margin-bottom: 30px;
-    @include mix.flex-col;
     @include mix.flex-center;
   }
 
-  .logo-container-desktop img {
+  .logo-container-square img {
     height: 75px;
-    width: auto;
   }
 
-  .logo-container-tablet {
+  .logo-container-line {
     display: none;
-  }
-
-  .menu-section-container {
-    width: 100%;
-    @include mix.flex-row;
-    @include mix.flex-center;
   }
 
   .menu-items-container {
@@ -165,26 +150,19 @@ background-color: rgb(
 
   .cta-button-container {
     width: 40%;
-    align-items: end;
-    white-space: nowrap;
   }
 }
 
 
 
-// Small Tablet Styles
+// Small Tablet and Mobile Styles
 
 @media (max-width: 700px) {
-
-  .logo-container-tablet {
-    margin-bottom: 30px;
-  }
 
   .nav-items-container {
     width: 100%;
     @include mix.flex-col;
     @include mix.flex-center;
-    justify-content: space-between;
   }
 
   .menu-items-container {
@@ -195,19 +173,13 @@ background-color: rgb(
   .cta-button-container {
     display: none;
   }
-
-  .menu-section-container {
-    width: 100%;
-    @include mix.flex-row;
-    @include mix.flex-center;
-  }
 }
 
 
 
 // Tablet Styles
 
-@media (min-width: 500px) and (max-width: 1000px) {
+@media (min-width: v.$tablet-min) and (max-width: v.$tablet-max) {
   .nav-bar {
     height: auto;
   }
@@ -215,98 +187,67 @@ background-color: rgb(
   .nav-container {
     height: auto;
     @include mix.flex-col;
-    @include mix.flex-center;
   }
 
   .nav-items-container {
     width: 100%;
     @include mix.flex-row;
-    justify-content: space-between;
   }
 
-  .logo-container-desktop {
+  .logo-container-square {
     display: none;
   }
 
-  .logo-container-tablet {
+  .logo-container-line {
     display: block;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 36px;
-    @include mix.flex-row;
-    @include mix.flex-center;
   }
 
-  .logo-container-tablet img {
+  .logo-container-line img {
     width: 100%;
   }
   
 }
 
 
-@media (min-width: 500px) and (max-width: 700px) {
-  .menu-section-container {
-    width: 100%;
-    @include mix.flex-row;
-    @include mix.flex-center;
-  }
-}
-
-
-@media (min-width: 701px) and (max-width: 1000px) {
+@media (min-width: 701px) and (max-width: v.$tablet-max) {
   .nav-items-container {
     @include mix.flex-row;
     justify-content: space-around;
   }
   .menu-items-container {
     padding: 0px 20px 0px 0px;
-    justify-content: space-between;
   }
 
   .menu-section-container {
-    width: 100%;
-    max-width: 450px;
-    @include mix.flex-row;
     justify-content: baseline;
-  }
-
-  .menu-items-container {
-    justify-content: space-around;
   }
 
   .cta-button-container {
     width: auto;
-    align-items: end;
-    white-space: nowrap;
+  }
+}
+
+@media (min-width: v.$desktop-min) {
+  .logo-container-line {
+    display: none;
   }
 }
 
 
-
 // Desktop Styles
 
-@media (min-width: 1001px) {
-  .menu-section-container {
-    width: 100%;
-    @include mix.flex-row;
-    @include mix.flex-center;
-  }
-
 @media (min-width: 1450px) {
- .logo-container-desktop {
+ .logo-container-square {
     width: 33%;
   }
   
   .nav-items-container {
     width: 66%;
     @include mix.flex-row;
-    justify-content: space-between;
   }
   
   .menu-section-container {
     width: 50%;
-    @include mix.flex-row;
-    align-items: center;
     justify-content: baseline;
   }
   
@@ -314,53 +255,3 @@ background-color: rgb(
     width: 50%;
   }
 }
-
- 
-
-}
-
-// @media (min-width: 1300px) {  
-//   .logo-container-desktop {
-//     display: none;
-//   }
-
-//   .logo-container-tablet {
-//     display: block;
-//     @include mix.flex-row;
-//     justify-content: baseline;
-//     width: 40%;
-//   }
-
-//   .logo-container-tablet img {
-//     display: block;
-//     width: 100%;
-//   }
-
-//   .nav-items-container {
-//     width: 60%;
-//     @include mix.flex-row;
-//     justify-content: space-between;
-//   }
-  
-//   .menu-section-container {
-//     width: 70%;
-  //   @include mix.flex-row;
-  //   align-items: center;
-  // }
-  
-  // .cta-button-container {
-  //   width: 30%;
-  //   @include mix.flex-col;
-  //   align-items: end;
-  //   white-space: nowrap;
-  // }
-  
-  // .menu-items-container {
-  //   width: 100%;
-  //   max-width: 450px;
-  //   @include mix.flex-row;
-  //   justify-content: space-around;
-//     padding: 10px 20px 0px 20px;
-//   }
-
-// }

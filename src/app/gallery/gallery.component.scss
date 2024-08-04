@@ -1,0 +1,108 @@
+@use '../app.component.scss';
+@use '../styles/variables' as v;
+@use '../styles/mixins' as mix;
+
+h2 {
+  margin: 0px;
+}
+
+// Gallery Containers
+
+.gallery-container {
+    width: 100%; 
+    height: auto; 
+    background-color: white;
+    padding: 48px;
+    @include mix.flex-row;
+    @include mix.flex-center;
+}
+
+.gallery-column {
+  max-width: v.$max-container-width;
+  @include mix.flex-center;
+  @include mix.flex-col;
+}
+
+.gallery-preview {
+  width: 100%;
+  height: auto;
+  margin: 50px 0px;
+  @include mix.flex-center;
+  @include mix.flex-col;
+}
+
+.gallery-row {
+  width: 100%;
+  height: auto;
+  @include mix.flex-center;
+  @include mix.flex-row;
+}
+
+
+
+// Gallery Title Styles
+
+
+
+
+
+// Gallery Tile Styles
+
+.gallery-item {
+  background-color: blue;
+  aspect-ratio: 1/1;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+@media (max-width: v.$mobile-max) {
+  .gallery-row {
+    @include mix.flex-col;
+  }
+  .gallery-column {
+    width: 80%;
+  }
+  .gallery-item {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: v.$tablet-min) and (max-width: v.$tablet-max) {
+  
+  .gallery-item {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .gallery-column {
+    width: 100%;
+  }
+}
+
+@media (min-width: v.$desktop-min) {
+  .gallery-item {
+    width: 25vw;
+    margin: 1.5vw;
+  }
+
+  .gallery-column {
+    width: 80%;
+  }
+}
+
+
+
+
+// CTA Button Styles
+
+.cta-button-container {
+  width: 100%;
+  @include mix.flex-col;
+  @include mix.flex-center;
+}
+
+.cta-btn {
+  @include mix.cta-btn-styles;
+}

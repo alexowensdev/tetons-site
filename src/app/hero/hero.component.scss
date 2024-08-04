@@ -38,7 +38,7 @@ h1 {
 
 .banner {
     width: 100%;
-    padding: 24px;
+    padding: 48px;
     height: auto;
     background-color: v.$dark-opacity;
     @include mix.flex-row;
@@ -46,6 +46,7 @@ h1 {
 
 .banner-column {
     width: 80%;
+    max-width: v.$max-container-width;
     @include mix.flex-col;
 }
 
@@ -129,7 +130,7 @@ h1 {
 }
 
 .mini-banner {
-    padding: 12px;
+    padding: 36px;
     height: auto;
     background-color: v.$dark;
     @include mix.flex-row;
@@ -177,10 +178,13 @@ h1 {
     }
 
     .arrows {
-        bottom: 7%;
+        bottom: 5%;
       }
-}
 
+    .mini-banner {
+       padding: 24px;
+    }
+}
 
 
 // Tablet Styling
@@ -202,7 +206,7 @@ h1 {
     }
 
     .arrows {
-        bottom: 12.5%;
+        bottom: 10%;
       }
 }
 
@@ -223,6 +227,6 @@ h1 {
     }
 
     .arrows {
-        bottom: 12%;
+        bottom: 14%;
       }
 }

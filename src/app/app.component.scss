@@ -3,10 +3,6 @@
 @use './styles/mixins' as mix;
 
 
-//
-// Main Styling
-//
-
 // Element Declarations
 
 body {
@@ -17,60 +13,14 @@ div {
     box-sizing: border-box; 
 }
 
+a {
+    text-decoration: none;
+}
+
+
 // Other Main Declarations
 
 .screen-container, .main-container {
     width: 100%;
     
 }
-
-// SCSS Extensions
-
-%btn {
-    text-decoration: none;
-    text-align: center;
-    padding: 15px 25px;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
-}
-
-//
-// Font Styling
-//
-
-%light-paragraph-font {
-    color: v.$light;
-    font-size: 18px;
-    @include mix.kulim-park-regular; 
-}
-
-%dark-paragraph-font {
-    color: v.$dark;
-    font-size: 18px;
-    @include mix.kulim-park-regular; 
-}
-
-%light-subtitle-font {
-    color: v.$light;
-    font-size: 24px;
-    @include mix.battambang-regular;
-}
-
-%dark-subtitle-font {
-    color: v.$light;
-    font-size: 24px;
-    @include mix.battambang-regular;
-}
-
-.bold {
-    font-weight: 700 !important;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-.dark-text {
-    @include mix.dark-paragraph-font;
-  }

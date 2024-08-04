@@ -1,10 +1,32 @@
 @use './variables' as v;
 
+
+
+// Font Mixins
+
+@mixin light-paragraph-font {
+    color: v.$light;
+    font-size: 18px;
+    @include kulim-park-regular; 
+}
+
 @mixin dark-paragraph-font {
     color: v.$dark;
     font-size: 18px;
-    @include kulim-park-regular; // Assuming kulim-park-regular is also a mixin
+    @include kulim-park-regular;
   }
+
+@mixin light-subtitle-font {
+    color: v.$light;
+    font-size: 24px;
+    @include battambang-regular;
+}
+
+@mixin dark-subtitle-font {
+    color: v.$light;
+    font-size: 24px;
+    @include battambang-regular;
+}
 
 @mixin kulim-park-regular {
     font-family: "Kulim Park", sans-serif;
@@ -17,10 +39,6 @@
     font-weight: 200;
     font-style: normal;
 }
-
-
-
-// Font Mixins
 
 @mixin battambang-regular {
     font-family: "Battambang", system-ui;
@@ -42,7 +60,6 @@
 
 
 
-
 //
 // Flex Styles
 //
@@ -61,3 +78,30 @@
     display: flex;
     flex-flow: column nowrap;
 }
+
+
+
+// Button Styles
+
+@mixin btn {
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+@mixin cta-btn-styles {
+    background-color: v.$cta-btn-color;
+    @include btn;
+    @include light-paragraph-font;
+  
+    &:hover {
+  background-color: rgb(
+    calc((red(v.$cta-btn-color) + v.$cta-hover-color-changer) * 1),
+    calc((green(v.$cta-btn-color) + v.$cta-hover-color-changer) * 1),
+    calc((blue(v.$cta-btn-color) + v.$cta-hover-color-changer) * 1)
+  )
+  }
+  }
+  
