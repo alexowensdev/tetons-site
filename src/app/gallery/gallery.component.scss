@@ -8,11 +8,16 @@
 }
 
 .cta-text-container {
-  padding: 20px 50px;
+  padding: 0px;
 }
 
 .cta-text {
-  @include mix.dark-paragraph-font;
+  @include mix.kulim-park-bold;
+  font-size: 30px;
+  line-height: 36px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  color: white;
   text-align: center;
 }
 
@@ -24,7 +29,7 @@
     height: auto; 
     background-color: white;
     padding: 48px 48px 96px 48px;
-    @include mix.flex-row;
+    @include mix.flex-col;
     @include mix.flex-center;
 }
 
@@ -38,12 +43,6 @@
 .section-title-container {
   margin-bottom: 30px;
 }
-
-// .gallery-buttons-container {
-//   width: 100%;
-//   @include mix.flex-center;
-//   @include mix.flex-col;
-// }
 
 .gallery-container {
   width: 100%;
@@ -67,6 +66,14 @@
   @include mix.flex-center;
   @include mix.flex-col;
   
+}
+
+.cta-bar {
+  background-color:v.$light-blue;
+  width: 100%;
+  padding: 50px 50px 70px 50px;
+  @include mix.flex-center;
+  @include mix.flex-col;
 }
 
 
@@ -98,12 +105,3 @@ h3 {
 @media (min-width: v.$desktop-min) {
 
 }
-
-// .gallery-button {
-//   margin: 10px;
-//   width: 100%;
-//   background-color: v.$dark;
-//   @include mix.flex-col;
-//   @include mix.btn;
-//   @include mix.light-paragraph-font;
-// }

@@ -5,48 +5,36 @@
             <h2>Gallery</h2>
         </div>
 
-        <!-- <div class="gallery-buttons-container">
-
-            <a class="gallery-button" href="#websites">
-                Websites
-              </a>
-              <a class="gallery-button" href="#photos">
-                Photography
-              </a>
-              <a class="gallery-button" href="#ai-gen">
-                AI Gen
-              </a>
-
-        </div> -->
-
         <div class="gallery-container">
             <div class="gallery-row-container">
                 <div id="websites" class="slider-container">
                     <h3>Websites</h3>
-                    <app-gallery-swiper [images]="images"></app-gallery-swiper>
+                    <app-gallery-swiper [images]="webImages"></app-gallery-swiper>
                 </div>
-                <div id="photos" class="slider-container">
-                    <h3>Photography</h3>
-                    <app-gallery-swiper [images]="images"></app-gallery-swiper>
-                </div>
-            </div>
-            <div class="gallery-row-container">
                 <div id="ai-gen" class="slider-container">
                     <h3>AI Gen</h3>
-                    <app-gallery-swiper [images]="images"></app-gallery-swiper>
+                    <app-gallery-swiper [images]="aiImages"></app-gallery-swiper>
+                </div>
+                
+            </div>
+            <div class="gallery-row-container">
+                <div id="photos" class="slider-container">
+                    <h3>Photography</h3>
+                    <app-gallery-swiper [images]="photoImages"></app-gallery-swiper>
                 </div>
             </div>
         </div>
-        <div class="cta-text-container">
-            <p class="cta-text">
-                Ready to Build Momumental Tools?
-            </p>
-        </div>
-        <div class="cta-button-container">
-            <a class="cta-btn" href="#free-call">
-              Free Digital Strategy Call
-            </a>
-          </div>
-
+    </div>
+</div>
+<div class="cta-bar">
+    <div class="cta-text-container">
+        <p class="cta-text">
+            Ready to Build Digital Landscapes?
+        </p>
+    </div>
+    <div class="cta-button-container">
+        <a class="cta-btn" href="#free-call">
+          Free Digital Strategy Call
+        </a>
     </div>
 </div>
