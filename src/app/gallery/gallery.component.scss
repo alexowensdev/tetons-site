@@ -2,9 +2,19 @@
 @use '../styles/variables' as v;
 @use '../styles/mixins' as mix;
 
-h2 {
-  margin: 0px;
+
+.sub-title-light-bg {
+  width: 100%;
+  @include mix.flex-row;
+  justify-content: space-between;
 }
+
+.sub-title-light-bg h4 {
+  width: 100%;
+  @include mix.flex-center;
+}
+
+
 
 // Gallery Containers
 
@@ -18,10 +28,13 @@ h2 {
 }
 
 .gallery-column {
+  width: 80%;
   max-width: v.$max-container-width;
   @include mix.flex-center;
   @include mix.flex-col;
 }
+
+
 
 .gallery-preview {
   width: 100%;
@@ -29,80 +42,65 @@ h2 {
   margin: 50px 0px;
   @include mix.flex-center;
   @include mix.flex-col;
+  
 }
 
-.gallery-row {
+.slide-row-container {
   width: 100%;
-  height: auto;
+  @include mix.flex-col;
   @include mix.flex-center;
-  @include mix.flex-row;
+  
 }
 
+.slider-container {
+  width: 100%;
+  margin: 100px 0px;
+  @include mix.flex-center;
+  @include mix.flex-col;
+  
+}
 
 
 // Gallery Title Styles
 
-
-
-
-
-// Gallery Tile Styles
-
-.gallery-item {
-  background-color: blue;
-  aspect-ratio: 1/1;
-  height: auto;
-  border-radius: 12px;
-  overflow: hidden;
+h2 {
+  margin: 0px;
+  @include mix.dark-subtitle-font;
 }
 
+h3 {
+  margin-bottom: 50px;
+  @include mix.dark-subtitle-font;
+  font-size: 36px !important;
+  text-align: center;
+}
+
+
 @media (max-width: v.$mobile-max) {
-  .gallery-row {
-    @include mix.flex-col;
-  }
   .gallery-column {
-    width: 80%;
-  }
-  .gallery-item {
     width: 100%;
-    margin-bottom: 50px;
   }
 }
 
 @media (min-width: v.$tablet-min) and (max-width: v.$tablet-max) {
   
-  .gallery-item {
-    width: 100%;
-    margin: 10px;
-  }
-
-  .gallery-column {
-    width: 100%;
-  }
 }
 
 @media (min-width: v.$desktop-min) {
-  .gallery-item {
-    width: 25vw;
-    margin: 1.5vw;
-  }
 
-  .gallery-column {
-    width: 80%;
-  }
 }
 
 
 
 
-// CTA Button Styles
+// // CTA Button Styles
 
-.cta-button-container {
-  width: 100%;
-  @include mix.flex-col;
-  @include mix.flex-center;
-}
+// .cta-button-container {
+//   width: 33%;
+//   @include mix.flex-col;
+//   @include mix.flex-center;
+// }
 
-.cta-btn {
-  @include mix.cta-btn-styles;
-}
+// .cta-btn {
+//   @include mix.cta-btn-styles;
+// }

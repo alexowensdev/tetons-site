@@ -18,13 +18,14 @@
 
 @mixin light-subtitle-font {
     color: v.$light;
-    font-size: 24px;
+    font-size: 48px;
     @include battambang-regular;
 }
 
 @mixin dark-subtitle-font {
-    color: v.$light;
-    font-size: 24px;
+    color: v.$dark;
+    font-size: 48px;
+    letter-spacing: 2px;
     @include battambang-regular;
 }
 

@@ -1,49 +1,48 @@
 <div class="gallery-container">
     <div class="gallery-column">
+
         <div class="section-title-light-bg">
-            <h2>Hello There</h2>
+            <h2>Gallery</h2>
         </div>
+
+        <div class="sub-title-light-bg">
+
+            <a class="cta-btn" href="#websites">
+                Websites
+              </a>
+              <a class="cta-btn" href="#photos">
+                Photography
+              </a>
+              <a class="cta-btn" href="#ai-gen">
+                AI Gen
+              </a>
+
+        </div>
+
         <div class="gallery-preview">
-            <div class="gallery-row">
-                <div class="gallery-item">
-                    <a href="#">
-                        <img src="#" alt="Picture of work We've done">
-                    </a>
+            <div class="slide-row-container">
+                <div id="#websites" class="slider-container">
+                    <h3>Websites</h3>
+                    <app-gallery-swiper [images]="images"></app-gallery-swiper>
                 </div>
-                <div class="gallery-item">
-                    <a href="#">
-                        <img src="#" alt="Picture of work We've done">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="#">
-                        <img src="#" alt="Picture of work We've done">
-                    </a>
+                <div id="#photos" class="slider-container">
+                    <h3>Photography</h3>
+                    <app-gallery-swiper [images]="images"></app-gallery-swiper>
                 </div>
             </div>
-            <div class="gallery-row">
-                <div class="gallery-item">
-                    <a href="#">
-                        <img src="#" alt="Picture of work We've done">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="#">
-                        <img src="#" alt="Picture of work We've done">
-                    </a>
-                </div>
-                <div class="gallery-item">
-                    <a href="#">
-                        <img src="#" alt="Picture of work We've done">
-                    </a>
+            <div class="slide-row-container">
+                <div id="#ai-gen" class="slider-container">
+                    <h3>AI Gen</h3>
+                    <app-gallery-swiper [images]="images"></app-gallery-swiper>
                 </div>
             </div>
-            
         </div>
-        <div class="cta-button-container">
+
+        <!-- <div class="cta-button-container">
             <a class="cta-btn" href="#free-call">
                 Explore Gallery
               </a>
-        </div>
+        </div> -->
+
     </div>
 </div>
