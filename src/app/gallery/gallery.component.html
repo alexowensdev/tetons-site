@@ -1,48 +1,52 @@
-<div class="gallery-container">
-    <div class="gallery-column">
+<div class="section-container">
+    <div class="section-column">
 
-        <div class="section-title-light-bg">
+        <div class="section-title-container">
             <h2>Gallery</h2>
         </div>
 
-        <div class="sub-title-light-bg">
+        <!-- <div class="gallery-buttons-container">
 
-            <a class="cta-btn" href="#websites">
+            <a class="gallery-button" href="#websites">
                 Websites
               </a>
-              <a class="cta-btn" href="#photos">
+              <a class="gallery-button" href="#photos">
                 Photography
               </a>
-              <a class="cta-btn" href="#ai-gen">
+              <a class="gallery-button" href="#ai-gen">
                 AI Gen
               </a>
 
-        </div>
+        </div> -->
 
-        <div class="gallery-preview">
-            <div class="slide-row-container">
-                <div id="#websites" class="slider-container">
+        <div class="gallery-container">
+            <div class="gallery-row-container">
+                <div id="websites" class="slider-container">
                     <h3>Websites</h3>
                     <app-gallery-swiper [images]="images"></app-gallery-swiper>
                 </div>
-                <div id="#photos" class="slider-container">
+                <div id="photos" class="slider-container">
                     <h3>Photography</h3>
                     <app-gallery-swiper [images]="images"></app-gallery-swiper>
                 </div>
             </div>
-            <div class="slide-row-container">
-                <div id="#ai-gen" class="slider-container">
+            <div class="gallery-row-container">
+                <div id="ai-gen" class="slider-container">
                     <h3>AI Gen</h3>
                     <app-gallery-swiper [images]="images"></app-gallery-swiper>
                 </div>
             </div>
         </div>
-
-        <!-- <div class="cta-button-container">
+        <div class="cta-text-container">
+            <p class="cta-text">
+                Ready to Build Momumental Tools?
+            </p>
+        </div>
+        <div class="cta-button-container">
             <a class="cta-btn" href="#free-call">
-                Explore Gallery
-              </a>
-        </div> -->
+              Free Digital Strategy Call
+            </a>
+          </div>
 
     </div>
 </div>
