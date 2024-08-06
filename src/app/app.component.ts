@@ -4,6 +4,7 @@ import { NavComponent } from './nav/nav.component';
 import { HeroComponent } from "./hero/hero.component";
 import { GalleryComponent } from "./gallery/gallery.component";
 import { GallerySwiperComponent } from './gallery-swiper/gallery-swiper.component';
+import { LightboxGalleryComponent } from './lightbox-gallery/lightbox-gallery.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { GallerySwiperComponent } from './gallery-swiper/gallery-swiper.componen
     NavComponent, 
     HeroComponent, 
     GalleryComponent, 
-    GallerySwiperComponent
+    GallerySwiperComponent,
+    LightboxGalleryComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

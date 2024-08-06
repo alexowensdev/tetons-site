@@ -105,3 +105,9 @@ h3 {
 @media (min-width: v.$desktop-min) {
 
 }
+
+@media (pointer:fine) {
+  .mobile-tablet-gallery {
+    display: none
+  }
+}

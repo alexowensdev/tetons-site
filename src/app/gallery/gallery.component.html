@@ -6,21 +6,23 @@
         </div>
 
         <div class="gallery-container">
-            <div class="gallery-row-container">
-                <div id="websites" class="slider-container">
-                    <h3>Websites</h3>
-                    <app-gallery-swiper [images]="webImages"></app-gallery-swiper>
+            <div class="mobile-tablet-gallery">
+                <div class="gallery-row-container">
+                    <div id="websites" class="slider-container">
+                        <h3>Websites</h3>
+                        <app-gallery-swiper [images]="webImages"></app-gallery-swiper>
+                    </div>
+                    <div id="ai-gen" class="slider-container">
+                        <h3>AI Gen</h3>
+                        <app-gallery-swiper [images]="aiImages"></app-gallery-swiper>
+                    </div>
+                    
                 </div>
-                <div id="ai-gen" class="slider-container">
-                    <h3>AI Gen</h3>
-                    <app-gallery-swiper [images]="aiImages"></app-gallery-swiper>
-                </div>
-                
-            </div>
-            <div class="gallery-row-container">
-                <div id="photos" class="slider-container">
-                    <h3>Photography</h3>
-                    <app-gallery-swiper [images]="photoImages"></app-gallery-swiper>
+                <div class="gallery-row-container">
+                    <div id="photos" class="slider-container">
+                        <h3>Photography</h3>
+                        <app-gallery-swiper [images]="photoImages"></app-gallery-swiper>
+                    </div>
                 </div>
             </div>
         </div>
