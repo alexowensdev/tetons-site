@@ -5,6 +5,7 @@ import { HeroComponent } from "./hero/hero.component";
 import { GalleryComponent } from "./gallery/gallery.component";
 import { GallerySwiperComponent } from './gallery-swiper/gallery-swiper.component';
 import { LightboxGalleryComponent } from './lightbox-gallery/lightbox-gallery.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { LightboxGalleryComponent } from './lightbox-gallery/lightbox-gallery.co
     HeroComponent, 
     GalleryComponent, 
     GallerySwiperComponent,
-    LightboxGalleryComponent
+    LightboxGalleryComponent,
+    FontAwesomeModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -23,23 +25,5 @@ import { LightboxGalleryComponent } from './lightbox-gallery/lightbox-gallery.co
 
 export class AppComponent {
   title = 'homes';
-    images = [
-      {
-        imgSrc: "/gallery-images/ai-geo-mountain-01.png",
-        imgAlt: "AI generated geometric mountain."
-      },
-      {
-        imgSrc: "/gallery-images/ai-line-art-tetons-01.png",
-        imgAlt: "AI generated line art of the grand tetons mountain range."
-      },    
-      {
-        imgSrc: "/gallery-images/photo-aa-planthouse.JPG",
-        imgAlt: "Photo of AA Planthouse, a plant shop I founded."
-      },
-      {
-      imgSrc: "/gallery-images/photo-deer.JPG",
-      imgAlt: "Photo of a buck deer among pine trees, in Island Park, Idaho."
-      }
-    ]
   }
   

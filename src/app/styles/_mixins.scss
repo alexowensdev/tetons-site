@@ -106,3 +106,21 @@
   }
   }
   
+  
+  @mixin cta-bar {
+    width: 100%;
+    padding: 50px 50px 70px 50px;
+    @include flex-center;
+    @include flex-col;
+  }
+  
+  @mixin cta-text {
+    @include kulim-park-regular;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 2px;
+    word-spacing: -5px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    text-align: center;
+  }

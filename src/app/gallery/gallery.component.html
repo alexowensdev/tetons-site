@@ -6,6 +6,22 @@
         </div>
 
         <div class="gallery-container">
+            <div class="desktop-gallery">
+                <div class="desktop-row-container">
+                    <div class="lightbox-container">
+                        <h3>Websites</h3>
+                        <app-lightbox-gallery [galleryImages]="webImages" [showCount]="true"></app-lightbox-gallery>
+                    </div>
+                    <div class="lightbox-container">
+                        <h3>AI Generation</h3>
+                        <app-lightbox-gallery [galleryImages]="aiImages"></app-lightbox-gallery>
+                    </div>
+                    <div class="lightbox-container">
+                        <h3>Photograph</h3>
+                        <app-lightbox-gallery [galleryImages]="photoImages"></app-lightbox-gallery>
+                    </div>
+                </div>
+            </div>
             <div class="mobile-tablet-gallery">
                 <div class="gallery-row-container">
                     <div id="websites" class="slider-container">
@@ -28,6 +44,7 @@
         </div>
     </div>
 </div>
+
 <div class="cta-bar">
     <div class="cta-text-container">
         <p class="cta-text">

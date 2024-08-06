@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { GallerySwiperComponent } from '../gallery-swiper/gallery-swiper.component';
-
+import { LightboxGalleryComponent } from '../lightbox-gallery/lightbox-gallery.component';
 
 
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [GallerySwiperComponent],
+  imports: [
+    GallerySwiperComponent,
+    LightboxGalleryComponent
+  ],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.scss',
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

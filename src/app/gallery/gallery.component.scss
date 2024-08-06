@@ -3,25 +3,6 @@
 @use '../styles/mixins' as mix;
 
 
-.cta-btn {
-  @include mix.cta-btn-styles;
-}
-
-.cta-text-container {
-  padding: 0px;
-}
-
-.cta-text {
-  @include mix.kulim-park-bold;
-  font-size: 30px;
-  line-height: 36px;
-  margin-top: 0px;
-  margin-bottom: 50px;
-  color: white;
-  text-align: center;
-}
-
-
 // Gallery Containers
 
 .section-container {
@@ -68,14 +49,6 @@
   
 }
 
-.cta-bar {
-  background-color:v.$light-blue;
-  width: 100%;
-  padding: 50px 50px 70px 50px;
-  @include mix.flex-center;
-  @include mix.flex-col;
-}
-
 
 // Gallery Title Styles
 
@@ -92,22 +65,49 @@ h3 {
 }
 
 
+// CTA Styles
+
+.cta-bar {
+  background-color:v.$dark;
+  @include mix.cta-bar;
+}
+
+.cta-btn {
+  @include mix.cta-btn-styles;
+}
+
+.cta-text-container {
+  padding: 0px;
+}
+
+.cta-text {
+  color: v.$light-blue;
+  @include mix.cta-text;
+}
+
+
+// Media Styles
+
 @media (max-width: v.$mobile-max) {
   .section-column {
     width: 100%;
   }
 }
 
-@media (min-width: v.$tablet-min) and (max-width: v.$tablet-max) {
-  
-}
-
-@media (min-width: v.$desktop-min) {
-
-}
-
 @media (pointer:fine) {
   .mobile-tablet-gallery {
+    display: none
+  }
+}
+
+@media (pointer:coarse) {
+  .desktop-gallery {
+    display: none
+  }
+}
+
+@media (pointer:none) {
+  .desktop-gallery {
     display: none
   }
 }

@@ -13,6 +13,7 @@ export interface Slide {
   templateUrl: './gallery-swiper.component.html',
   styleUrl: './gallery-swiper.component.scss'
 })
+
 export class GallerySwiperComponent {
   
   @Input() images: Slide[] = [];
