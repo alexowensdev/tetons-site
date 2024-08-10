@@ -5,7 +5,9 @@ import { HeroComponent } from "./hero/hero.component";
 import { GalleryComponent } from "./gallery/gallery.component";
 import { GallerySwiperComponent } from './gallery-swiper/gallery-swiper.component';
 import { LightboxGalleryComponent } from './lightbox-gallery/lightbox-gallery.component';
+import { AppointmentCalendarComponent } from './appointment-calendar/appointment-calendar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @Component({
   selector: 'app-root',
@@ -17,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     GalleryComponent, 
     GallerySwiperComponent,
     LightboxGalleryComponent,
+    AppointmentCalendarComponent,
     FontAwesomeModule
   ],
   templateUrl: './app.component.html',

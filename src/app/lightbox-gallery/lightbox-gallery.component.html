@@ -1,19 +1,38 @@
 <div class="gallery-lightbox-container">
+
+    <!-- <div class="gallery">
+        <div class="gallery-img-container" *ngFor="let image of galleryImages; let i = index">
+          <a *ngIf="image.link" [href]="image.link" target="_blank">
+            <img [src]="image.imgSrc" [alt]="image.imgAlt" class="gallery-img">
+          </a>
+          <img *ngIf="!image.link" [src]="image.imgSrc" [alt]="image.imgAlt" class="gallery-img">
+        </div>
+      </div> -->
+
     <div class="gallery">
         <div 
         class="gallery-img-container"
         *ngFor="let image of galleryImages; 
         let i = index" 
         >
-
-        <img
-        
-            [src]="image.imgSrc" 
-            [alt]="image.imgAlt" 
-            class="gallery-img"
+        <a 
+        *ngIf="image.imgLink"
+        [href]="image.imgLink" 
+        target="_blank"
+        class="clickable-resource">
+            <img
+            
+                [src]="image.imgSrc" 
+                [alt]="image.imgAlt" 
+                class="gallery-img"
             >
+        </a>
+        
+        <img *ngIf="!image.imgLink" [src]="image.imgSrc" [alt]="image.imgAlt" class="gallery-img">
+
         </div>
     </div>
+    
     <div *ngIf="showMask" class="lightbox">
         <span *ngIf="showCount" class="count">{{currentIndex + 1}}/{{totalImageCount}}</span>
         <button *ngIf="previewImage" class="close-btn">

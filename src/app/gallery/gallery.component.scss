@@ -5,6 +5,19 @@
 
 // Gallery Containers
 
+.websitesGallery app-lightbox-gallery .gallery {
+  column-count: 2 !important;
+}
+
+.click-image-sub-title {
+  margin-bottom: 20px;
+  @include mix.dark-subtitle-font;
+  font-size: 18px !important;
+  color: v.$blue !important;
+  text-align: center;
+}
+
+
 .section-container {
     width: 100%; 
     height: auto; 
@@ -111,3 +124,6 @@ h3 {
     display: none
   }
 }
+
+
+

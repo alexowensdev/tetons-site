@@ -6,6 +6,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 export interface Item {
   imgSrc: string;
   imgAlt: string;
+  imgLink?: string;
 }
 
 @Component({

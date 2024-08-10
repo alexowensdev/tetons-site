@@ -19,19 +19,23 @@ export class GalleryComponent {
   webImages = [
     {
       imgSrc: "/gallery-images/website-rexburg-air-show.webp",
-      imgAlt: "Screenshot of the landing page of the Rexburg Air Show's website."
+      imgAlt: "Screenshot of the landing page of the Rexburg Air Show's website.",
+      imgLink: "https://rexburg-air-show.vercel.app/"
     },
     {
       imgSrc: "/gallery-images/website-madisonhealth.webp",
-      imgAlt: "Screenshot of the landing page of Madisonhealth's website."
+      imgAlt: "Screenshot of the landing page of Madisonhealth's website.",
+      imgLink: "#"
     },
     {
       imgSrc: "/gallery-images/website-underdog.webp",
-      imgAlt: "Screenshot of the landing page of Underdog Kennels' website."
+      imgAlt: "Screenshot of the landing page of Underdog Kennels' website.",
+      imgLink: "https://underdog-kennels.vercel.app/"
     },
     {
       imgSrc: "/gallery-images/website-rets.webp",
-      imgAlt: "Screenshot of the landing page of the Real Estate Tax Summit's website."
+      imgAlt: "Screenshot of the landing page of the Real Estate Tax Summit's website.",
+      imgLink: "https://real-estate-tax-summit.vercel.app/"
     }
   ]
 
