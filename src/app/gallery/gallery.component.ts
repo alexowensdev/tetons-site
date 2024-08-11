@@ -25,7 +25,7 @@ export class GalleryComponent {
     {
       imgSrc: "/gallery-images/website-madisonhealth.webp",
       imgAlt: "Screenshot of the landing page of Madisonhealth's website.",
-      imgLink: "#"
+      imgLink: "https://madison-health-m33v0blhj-alex-owens-projects.vercel.app"
     },
     {
       imgSrc: "/gallery-images/website-underdog.webp",
