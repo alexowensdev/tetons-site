@@ -25,7 +25,12 @@ export class GalleryComponent {
     {
       imgSrc: "/gallery-images/website-madisonhealth.webp",
       imgAlt: "Screenshot of the landing page of Madisonhealth's website.",
-      imgLink: "https://madison-health-m33v0blhj-alex-owens-projects.vercel.app"
+      imgLink: "https://madison-health-m33v0blhj-alex-owens-projects.vercel.app/providers/index.html"
+    },
+    {
+      imgSrc: "/gallery-images/website-world-map.webp",
+      imgAlt: "Screenshot of the landing page of the Interactive World Map's website.",
+      imgLink: "https://interactive-world-map-murex.vercel.app/"
     },
     {
       imgSrc: "/gallery-images/website-underdog.webp",
