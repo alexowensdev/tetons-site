@@ -28,7 +28,7 @@ export class GalleryComponent {
       imgLink: "https://madison-health-m33v0blhj-alex-owens-projects.vercel.app/providers/index.html"
     },
     {
-      imgSrc: "/gallery-images/website-world-map.webp",
+      imgSrc: "/gallery-images/website-world-map-title.png",
       imgAlt: "Screenshot of the landing page of the Interactive World Map's website.",
       imgLink: "https://interactive-world-map-murex.vercel.app/"
     },
